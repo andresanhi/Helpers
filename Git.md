@@ -212,6 +212,9 @@ Elimina sin preguntar
 Publicar rama local a remoto
 ```ssh
 	git push origin serverfix <nameBranch>
+Elimina rama del repositorio remoto
+```ssh
+	git push origin :<nameBranch>
 ```
 
 ## GIT TAG
@@ -283,6 +286,19 @@ Verifica cambios en el repositorio online con el local
 Borrar un archivo del repositorio
 ```ssh
 	git rm <archivo> 
+```
+Descarta los cambios realizados a un archivo
+```ssh
+	git checkout -- index.html
+```
+Descarta los cambios realizados en todos los archivos o que estén en staging
+```ssh
+	git reset --hard
+```
+Saca un archivo de staging y elimina los cambios
+```ssh
+	git reset HEAD archivo.txt
+	git checkout -- archivo.txt
 ```
 
 ## Fork
