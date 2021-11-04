@@ -23,6 +23,11 @@ Interacturar con archivo config
     kubectl config get-contexts                 # View availables contexts
     kubectl config current-context              # View current context
     kubectl config use-context my-cluster-name  # Switch context
+``
+
+Crear namespace
+```ssh
+kubectl create namespace <insert-namespace-name-here>
 ```
 
 ## View Resources
@@ -40,4 +45,16 @@ Interacturar con archivo config
 
 ```ssh
 	kubectl logs -f my-pod -n namespace           # View container logs
+```
+
+## Ingress
+
+```ssh
+	kubectl get ingress -n namespace           				# View ingress by namespace
+	kubectl describe ingress -n namespace <ingress-name>	# View ingress description
+```
+
+## Services
+```ssh
+	kubectl get services -n tracking           				# View services information
 ```

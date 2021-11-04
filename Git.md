@@ -1,4 +1,4 @@
-## Configuración Básica
+## CONFIGURACIÓN BÁSICA
 
 Configurar Nombre que salen en los commits
 ```ssh
@@ -13,8 +13,7 @@ Marco de colores para los comando
 	git config --global color.ui true
 ```
 
-## Iniciando repositorio
-
+## INICIANDO REPOSITORIO
 Iniciamos GIT en la carpeta donde esta el proyecto
 ```ssh
 	git init
@@ -31,9 +30,26 @@ Hacemos el primer commit
 ```ssh
 	git commit -m "Texto que identifique por que se hizo el commit"
 ```
-subimos al repositorio
+Subir al repositorio
 ```ssh
 	git push origin master
+```
+
+## AGREGAR REPOSITORIO LOCAL A REMOTO
+```ssh
+	git remote add origin <URL>
+	git push -u origin --all
+```
+
+
+# Editar Repositorios ya clonados
+Validar URL del remoto
+```ssh
+	git config --get remote.origin.url
+```
+Cambiar URL del remoto
+```ssh
+	git remote set-url origin <url>
 ```
 
 ## GIT CLONE
@@ -75,6 +91,7 @@ Añadimos todos los archivos dentro de un directorios
 ```ssh
 	git add docs/
 ```
+
 ## GIT COMMIT
 
 Cargar en el HEAD los cambios realizados
@@ -191,6 +208,12 @@ Elimina sin preguntar
 ```ssh
 	git branch -D <nameBranch>
 ```
+
+Publicar rama local a remoto
+```ssh
+	git push origin serverfix <nameBranch>
+```
+
 ## GIT TAG
 
 Muestra una lista de todos los tags
@@ -273,4 +296,34 @@ Merge con master de un fork
 ```
 	git fetch upstream
 	git merge upstream/master
+```
+
+## GIT MERGE
+:wq
+
+## GIT STASH
+El comando git stash almacena temporalmente (o guarda en un stash) los cambios que hayas efectuado en el código en el que estás trabajando para que puedas trabajar en otra cosa
+```
+	git stash
+```
+Para guardar un stash con un mensaje
+```
+	git stash save "mensaje"
+```
+Volver a aplicar los cambios de un stash.
+```
+	git stash pop
+```
+Al hacer pop del stash, se eliminan los cambios de este y se vuelven a aplicar en el código en el que estás trabajando.
+Para conservar el stash se usa el comando stash apply
+```
+	git stash apply
+```
+Para almacenar en stash los archivos agregados
+```
+	git stash -u
+```
+Para ver los stashes disponibles
+```
+	git stash list
 ```
