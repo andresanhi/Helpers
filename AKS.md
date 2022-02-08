@@ -17,6 +17,13 @@ Obtener credenciales de acceso
 ```ssh
 	az aks get-credentials --resource-group 'GrupName' --name 'AksName' --subscription 'SuscriptionId' 
 ```
+
+Actualizar recurso en kubeconfig
+```ssh
+	az aks get-credentials --resource-group 'GrupName' --name 'AksName' --subscription 'SuscriptionId' 
+	az aks get-credentials --resource-group GRPTestAKS --name Akstest2022 --subscription 996ceb08-b680-4011-888e-c0c1b6abbd02
+```
+
 Interacturar con archivo config 
 ```ssh
 	kubectl config view                         # View config file
