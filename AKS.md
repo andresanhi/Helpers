@@ -34,8 +34,8 @@ Interacturar con archivo config
 
 Crear namespace
 ```ssh
-kubectl create namespace <insert-namespace-name-here>
-```
+	kubectl create namespace <insert-namespace-name-here>
+``
 
 ## View Resources
 Interacturar con archivo config 
@@ -64,4 +64,9 @@ Interacturar con archivo config
 ## Services
 ```ssh
 	kubectl get services -n tracking           				# View services information
+```
+
+## Virtual Services
+```ssh
+	kubectl get virtualservice -n <namespace>      # View virtualservices information
 ```

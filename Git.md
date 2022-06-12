@@ -49,7 +49,7 @@ Validar URL del remoto
 ```
 Cambiar URL del remoto
 ```ssh
-	git remote set-url origin <url>
+	git remote set-url origin <URL>
 ```
 
 ## GIT CLONE
@@ -196,6 +196,10 @@ Crea un branch
 ```ssh
 	git branch <nameBranch>
 ```
+Crear una rama a partir de otra
+```
+	git checkout -b <new-branch> <existing-branch>
+```
 Lista los branches
 ```ssh
 	git branch
@@ -299,7 +303,7 @@ Saca un archivo de staging y elimina los cambios
 ```ssh
 	git reset HEAD archivo.txt
 	git checkout -- archivo.txt
-```
+``
 
 ## Fork
 
